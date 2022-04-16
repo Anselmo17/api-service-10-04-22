@@ -23,7 +23,7 @@ namespace api_service_10_04_22.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        [HttpGet("listarTodos")]
         public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos([FromQuery] int Page = 0, int Size = 5)
         {
             var results = await _context.Produtos
